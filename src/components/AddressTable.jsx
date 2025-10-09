@@ -16,9 +16,10 @@ const AddressTable = ({ books, updateBook }) => {
 
   const handleSave = (id) => {
     const newErrors = {};
-    if (!editData.firstName) newErrors.firstName = "The first name is required";
-    if (!editData.lastName) newErrors.lastName = "The last name is required";
-    if (!editData.phone) newErrors.phone = "The phone is required";
+
+    if (!editData.firstName.trim()) newErrors.firstName = "The first name is required";
+    if (!editData.lastName.trim()) newErrors.lastName = "The last name is required";
+    if (!editData.phone.trim()) newErrors.phone = "The phone is required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);

@@ -35,7 +35,7 @@ function AppComponent() {
       <div style={{ marginBottom: "20px" }}>
         <input
           type="text"
-          placeholder="Search by first or last name"
+          placeholder="Search by first"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           style={{
